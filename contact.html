@@ -11,7 +11,12 @@
 </head>
 
 <body>
-
+    <script>
+        function home() {
+            alert("Thank you for your message. We will try to respond soon!")
+            window.location.replace("./index.html");
+        }
+    </script>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -31,41 +36,28 @@
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justifiy-content-left">
             <div class="col-10">
-                <div class="row">
-                    <div class="col-12">
-                        <header><h1>About Me</h1></header>
+                <header style="font-size: 32px;">Contact</header>
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="name">
                     </div>
-                </div>
-                <div class="row just-content-left">
-                    <div class="col-3">
-                        <img style="width: 30%; height: 30%;" src="./Headshot.jpg" alt="headshot">
-
+                    <div class="form-group">
+                        <label for="emailInput">Email address</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
                     </div>
-                    <div class="col-9">
-                        <p>Hi everyone! I'm Max, a college freshman, and I'm really excited to be taking Rutgers' Coding Bootcamp this semester!</p>
-                        <p>You can find me at: </p>
-                        <a href = "https://www.facebook.com/max.yu.7374/"></a>
-                        <a href = "https://www.instagram.com/maxyu7/"></a>
-                        <ul>
-                            <li><a href = "https://www.facebook.com/max.yu.7374/">Facebook</a></li>
-                            <li><a href = "https://www.instagram.com/maxyu7/">Instagram</a></li>
-                            <li>Email: maxwellyu@college.harvard.edu</li>
-                        </ul>
-
-
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="10" placeholder="Message"></textarea>
                     </div>
-                    
-                </div>
+                </form>
+                <button onclick= home()>Enter</button>
             </div>
-            
+            <div class="col-2"></div>
         </div>
-
-
-
     </div>
-
 </body>
 
 </html>
